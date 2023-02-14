@@ -1,3 +1,115 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.2rem;
+}
+
+.container {
+  width: min(85%, 1200px);
+  margin: 0 auto;
+}
+
+button {
+  background-color: transparent;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header {
+  background-color: #fff;
+  background-color: cyan;
+  padding: 1.5rem 0;
+}
+
+.nav-toggle {
+  cursor: pointer;
+  border: 0;
+  padding: 0em;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+  opacity: 0.75;
+}
+
+.hamburger {
+  width: 50%;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  margin: 0 auto;
+  height: 3px;
+  background: black;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  width: 100%;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+.nav {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+}
+
+.nav--visible {
+  visibility: visible;
+  height: auto;
+  position: relative;
+}
+
+@media (min-width: 800px) {
+  .nav-toggle {
+    display: none;
+  }
+  .nav {
+    visibility: visible;
+    display: flex;
+    height: auto;
+    position: relative;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
