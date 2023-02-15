@@ -25,16 +25,13 @@ ul {
 
 body {
   font-family: "Public Sans", sans-serif;
-  font-size: 1.2rem;
+  font-size: 0.95rem;
+  line-height: 1.5rem;
 }
 
 .container {
-  width: min(85%, 1200px);
+  width: min(90%, 1200px);
   margin: 0 auto;
-}
-
-button {
-  background-color: transparent;
 }
 
 .row {
@@ -45,8 +42,8 @@ button {
 
 .header {
   background-color: #fff;
-  background-color: cyan;
   padding: 1.5rem 0;
+  z-index: 5;
 }
 
 .nav-toggle {
@@ -55,61 +52,60 @@ button {
   padding: 0em;
 }
 
-.nav-toggle:focus,
-.nav-toggle:hover {
-  opacity: 0.75;
-}
-
-.hamburger {
-  width: 50%;
-  position: relative;
-}
-
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-  display: block;
-  margin: 0 auto;
-  height: 3px;
-  background: black;
-}
-
-.hamburger::before,
-.hamburger::after {
-  content: "";
-  width: 100%;
-}
-
-.hamburger::before {
-  transform: translateY(-6px);
-}
-
-.hamburger::after {
-  transform: translateY(3px);
-}
-
 .nav {
   visibility: hidden;
   height: 0;
   position: absolute;
 }
 
-.nav--visible {
-  visibility: visible;
-  height: auto;
-  position: relative;
+main {
+  overflow: hidden;
 }
 
-@media (min-width: 800px) {
-  .nav-toggle {
-    display: none;
-  }
-  .nav {
-    visibility: visible;
-    display: flex;
-    height: auto;
-    position: relative;
-  }
+.intro {
+  background-image: url(../images/bg-intro-mobile.svg);
+  background-repeat: no-repeat;
+  margin-top: -4.3rem;
+  overflow: hidden;
+  text-align: center;
+}
+.intro__bg {
+  margin-top: -3.2rem;
+}
+.intro__info {
+  padding: 1.5rem 0 5rem;
+}
+.intro__title {
+  color: hsl(233deg, 26%, 24%);
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+}
+.intro__text {
+  color: hsl(233deg, 8%, 62%);
+  margin: 1rem 0 2rem;
+}
+
+.info {
+  background-color: hsl(220deg, 16%, 96%);
+}
+
+.btn {
+  background-image: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
+  font-size: inherit;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 2rem;
+  border-radius: 200px;
+  font-weight: 700;
+  transition: transform 0.1s ease-out;
+}
+.btn:hover {
+  cursor: pointer;
+  transform: translateY(-1px);
+}
+.btn:active {
+  transform: translateY(2px);
 }
 
 /*# sourceMappingURL=main.css.map */

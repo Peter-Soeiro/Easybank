@@ -1,3 +1,4 @@
+//Basic Reset
 *,
 *::after,
 *::before {
@@ -33,16 +34,13 @@ $white: #fff;
 
 body {
   font-family: "Public Sans", sans-serif;
-  font-size: 1.2rem;
+  font-size: 0.95rem;
+  line-height: 1.5rem;
 }
 
 .container {
-  width: min(85%, 1200px);
+  width: min(90%, 1200px);
   margin: 0 auto;
-}
-
-button {
-  background-color: transparent;
 }
 
 .row {
@@ -53,8 +51,8 @@ button {
 
 .header {
   background-color: $white;
-  background-color: cyan;
   padding: 1.5rem 0;
+  z-index: 5;
 }
 
 .nav-toggle {
@@ -63,60 +61,74 @@ button {
   padding: 0em;
 }
 
-.nav-toggle:focus,
-.nav-toggle:hover {
-  opacity: 0.75;
-}
-
-.hamburger {
-  width: 50%;
-  position: relative;
-}
-
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-  display: block;
-  margin: 0 auto;
-  height: 3px;
-  background: black;
-}
-
-.hamburger::before,
-.hamburger::after {
-  content: "";
-  width: 100%;
-}
-
-.hamburger::before {
-  transform: translateY(-6px);
-}
-
-.hamburger::after {
-  transform: translateY(3px);
-}
-
 .nav {
   visibility: hidden;
   height: 0;
   position: absolute;
 }
 
-.nav--visible {
-  visibility: visible;
-  height: auto;
-  position: relative;
+main {
+  overflow: hidden;
+}
+
+.intro {
+  background-image: url(../images/bg-intro-mobile.svg);
+  background-repeat: no-repeat;
+  margin-top: -4.3rem;
+  overflow: hidden;
+  text-align: center;
+
+  &__bg {
+    margin-top: -3.2rem;
+  }
+
+  &__info {
+    padding: 1.5rem 0 5rem;
+  }
+
+  &__title {
+    color: $color-blue;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 2.9rem;
+  }
+
+  &__text {
+    color: $color-grey;
+    margin: 1rem 0 2rem;
+  }
+}
+
+.info {
+  background-color: $color-light-grey;
+}
+
+// Button
+.btn {
+  background-image: linear-gradient(to right, $color-green, $color-cyan);
+  font-size: inherit;
+  color: $white;
+  border: none;
+  padding: 0.6rem 2rem;
+  border-radius: 200px;
+  font-weight: 700;
+  transition: transform 0.1s ease-out;
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
 }
 
 @media (min-width: 800px) {
-  .nav-toggle {
-    display: none;
-  }
-
-  .nav {
-    visibility: visible;
-    display: flex;
-    height: auto;
-    position: relative;
-  }
+  // .nav {
+  //   visibility: visible;
+  //   display: flex;
+  //   height: auto;
+  //   position: relative;
+  // }
 }
