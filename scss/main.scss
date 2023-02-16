@@ -36,6 +36,8 @@ body {
   font-family: "Public Sans", sans-serif;
   font-size: 0.95rem;
   line-height: 1.5rem;
+
+  color: $color-grey;
 }
 
 .container {
@@ -71,6 +73,14 @@ main {
   overflow: hidden;
 }
 
+h2 {
+  color: $color-blue;
+  font-weight: 400;
+  line-height: 2.3rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
 .intro {
   background-image: url(../images/bg-intro-mobile.svg);
   background-repeat: no-repeat;
@@ -94,13 +104,135 @@ main {
   }
 
   &__text {
-    color: $color-grey;
     margin: 1rem 0 2rem;
   }
 }
 
 .info {
   background-color: $color-light-grey;
+  padding: 4.5rem 0;
+  text-align: center;
+
+  &__title {
+  }
+
+  &__text {
+    margin-bottom: 3.5rem;
+  }
+}
+
+.col {
+  &__title {
+    color: $color-blue;
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  &__img {
+    margin: 1.8rem auto;
+  }
+}
+
+.articles {
+  padding: 5rem 0;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+
+.article {
+  .img__container {
+    height: 13rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__container {
+    padding: 2rem 2rem 4rem 2rem;
+  }
+
+  &__author {
+    font-size: 0.7rem;
+    margin-bottom: 0.4rem;
+  }
+
+  &__title {
+    font-weight: 400;
+    color: $color-blue;
+    line-height: 1.2rem;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  &__text {
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+  }
+}
+
+.footer {
+  background-color: $color-blue;
+  text-align: center;
+
+  &__logo {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(106deg) brightness(105%) contrast(103%);
+    padding: 2rem 0;
+  }
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__item {
+    padding: 0 0.4rem;
+  }
+}
+
+footer .nav {
+  visibility: visible;
+  height: auto;
+  position: static;
+  margin: 1.5rem 0;
+
+  &__item {
+    padding: 0.2rem;
+    font-size: 0.8rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-light-grey;
+    padding: 1rem;
+  }
+}
+
+.copyright {
+  margin-top: 1.5rem;
+}
+
+.attribution {
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  a {
+    text-decoration: none;
+    color: lighten($color-grey, 25%);
+  }
 }
 
 // Button
