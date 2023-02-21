@@ -113,18 +113,23 @@ h2 {
 
 .articles {
   padding: 5rem 0;
+  background-color: hsl(0deg, 0%, 98%);
 }
 .articles__title {
   text-align: center;
   margin-bottom: 2rem;
 }
 
+.article {
+  background-color: #fff;
+}
 .article .img__container {
   height: 13rem;
   position: relative;
   overflow: hidden;
 }
 .article__img {
+  height: 100%;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -292,12 +297,15 @@ footer .nav__link {
     background-image: none;
     overflow: visible;
     justify-content: space-between;
+    position: relative;
   }
-  .intro .container {
+  .intro::before {
+    content: "";
+    position: absolute;
+    inset: -12rem 0 0 47%;
+    z-index: -1;
     background-image: url(../images/bg-intro-desktop.svg);
-    background-size: 50rem;
     background-repeat: no-repeat;
-    margin-top: -4.3rem;
   }
   .intro__img {
     margin-right: -18rem;
@@ -316,6 +324,53 @@ footer .nav__link {
   .intro__text {
     font-size: min(1.3vw, 1.2rem);
     line-height: min(1.9vw, 1.9rem);
+  }
+  .info {
+    text-align: left;
+  }
+  .info__title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .info__text {
+    font-size: 1.1rem;
+    width: 55%;
+    margin: 0 0 1.5rem;
+  }
+  .columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  .col {
+    margin-bottom: 2rem;
+  }
+  .col__img {
+    margin: 2.5rem 0;
+  }
+  .col__title {
+    font-size: 1.4rem;
+  }
+  .articles__title {
+    text-align: left;
+    font-size: 2.7rem;
+  }
+  .article__container {
+    padding: 1.5rem;
+  }
+  .article__title {
+    font-size: 1.1rem;
+  }
+  .article__text {
+    font-size: 0.84rem;
+  }
+  .footer .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .nav__list {
+    display: flex;
   }
   .btn {
     font-size: 1.1rem;

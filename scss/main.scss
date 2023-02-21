@@ -131,6 +131,7 @@ h2 {
 
 .articles {
   padding: 5rem 0;
+  background-color: $color-verylight-grey;
 
   &__title {
     text-align: center;
@@ -139,6 +140,7 @@ h2 {
 }
 
 .article {
+  background-color: #fff;
   .img__container {
     height: 13rem;
     position: relative;
@@ -146,6 +148,7 @@ h2 {
   }
 
   &__img {
+    height: 100%;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -347,14 +350,15 @@ footer .nav {
     background-image: none;
     overflow: visible;
     justify-content: space-between;
+    position: relative;
 
-    .container {
+    &::before {
+      content: "";
+      position: absolute;
+      inset: -12rem 0 0 47%;
+      z-index: -1;
       background-image: url(../images/bg-intro-desktop.svg);
-      background-size: 50rem;
       background-repeat: no-repeat;
-      margin-top: -4.3rem;
-      // background-position: 80rem -10rem;
-      // background-attachment: fixed;
     }
 
     &__img {
@@ -380,31 +384,65 @@ footer .nav {
     }
   }
 
-  // .info {
-  //   &__title {
-  //   }
+  .info {
+    text-align: left;
+    &__title {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
 
-  //   &__text {
-  //     width: 65%;
-  //     margin: 0 auto 2rem;
-  //   }
-  // }
+    &__text {
+      font-size: 1.1rem;
+      width: 55%;
+      margin: 0 0 1.5rem;
+    }
+  }
 
-  // .columns {
-  //   display: grid;
-  //   grid-template-columns: repeat(2, 1fr);
-  //   gap: 2rem;
-  // }
+  .columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
 
-  // .footer .nav {
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
+  .col {
+    margin-bottom: 2rem;
+    &__img {
+      margin: 2.5rem 0;
+    }
 
-  //   &__list {
-  //     display: flex;
-  //   }
-  // }
+    &__title {
+      font-size: 1.4rem;
+    }
+  }
+
+  .articles__title {
+    text-align: left;
+    font-size: 2.7rem;
+  }
+
+  .article {
+    &__container {
+      padding: 1.5rem;
+    }
+
+    &__title {
+      font-size: 1.1rem;
+    }
+
+    &__text {
+      font-size: 0.84rem;
+    }
+  }
+
+  .footer .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__list {
+      display: flex;
+    }
+  }
 
   // .nav__list + .nav__list {
   //   margin-top: 1rem;
