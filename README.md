@@ -13,8 +13,9 @@
 
 ## Author
 
-- Portfolio - [Peter Soeiro](https://github.com/Peter-Soeiro)
+- Portfolio - [devPeter](https://github.com/Peter-Soeiro)
 - Twitter - [@PeterSoeiro](https://twitter.com/PeterSoeiro)
+- Email - ricardo-soeiro@hotmail.com
 
 Design by [Frontend Mentor](https://www.frontendmentor.io)
 
